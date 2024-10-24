@@ -14,9 +14,9 @@ interface IRoute {
 }
 
 const PrivateRoute: FC<IRoute> = ({ component: Component }) => {
-  const auth = JSON.stringify(localStorage.getItem("auth"))
+  const auth = localStorage.getItem("auth")
 
-  if (auth?.isAuth) {
+  if (auth !== null && JSON.parse(auth)?.isAuth) {
     return <Component />
   }
 
