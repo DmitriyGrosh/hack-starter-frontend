@@ -1,4 +1,6 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {Login} from "./pages/login/Login.tsx";
+import {Register} from "./pages/register/Register.tsx";
 
 const Root = () => (
   <>
@@ -13,6 +15,14 @@ function App() {
       path: "/",
       element: <Root />,
     },
+    {
+      path: "/login",
+      element: <Login />
+    },
+    {
+      path: "/register",
+      element: <Register />
+    }
   ]);
 
   return (
